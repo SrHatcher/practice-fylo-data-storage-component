@@ -53,6 +53,8 @@ main{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    width: 32.7rem;
 }
 .sr-only{
     position: absolute;
@@ -71,7 +73,7 @@ main{
 
     padding:  3rem 4rem;
     height: 20rem;
-    width: 32.7rem;
+    
 
     border-radius: 1rem;
     border-top-right-radius: 10rem;
