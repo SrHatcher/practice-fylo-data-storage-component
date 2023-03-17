@@ -5,17 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!--Modern CSS reset-->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <!--my styles-->
+  <link rel="stylesheet" href="./styles/mobile.css">
+  <link rel="stylesheet" href="./styles/desktop.css" media="(min-width: 1000px)">
   <title>Frontend Mentor | Fylo data storage component</title>
 </head>
 <body>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
+  <!-- <style>
+    .globo-mensaje {
+      background-color: #eee;
+      color: #333;
+      font-size: 16px;
+      width: 300px;
+      height: 200px;
+      position: relative;
+      padding: 20px;
+      clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px, 20px 20px, 20px 50%, 0 calc(50% + 10px), 20px calc(50% + 10px));
+    }
   
-  0 GB
-  1000 GB
+    .globo-mensaje::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      border-style: solid;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #eee transparent transparent;
+    }
+  </style>
+  
+  <div class="globo-mensaje">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet elit augue, in efficitur elit euismod ut. Fusce dapibus orci felis, at pharetra velit imperdiet nec. Fusce malesuada elit in est pharetra euismod. Curabitur suscipit magna sit amet nibh malesuada dapibus. In vel tortor nec risus eleifend egestas. Sed vitae quam a nunc consequat dignissim eu sed nulla. Integer sagittis fringilla est, at scelerisque eros ultricies ut. Sed venenatis ex ante, a semper massa lacinia eu. Sed lobortis tellus at enim lobortis, a congue nulla mollis. Etiam non erat sed augue viverra tincidunt nec non erat. Aliquam luctus quam vel purus bibendum suscipit. Ut ac arcu vel ipsum venenatis ultricies. Pellentesque interdum rhoncus ipsum sed malesuada.</p>
+  </div> -->
+  
+
+  <h1 class="sr-only">Account Data Storage Information</h1>
+  
+  <main>
+    <section class="main__options">
+      <a class="option__logo" href="#" aria-label="Company logo"></a>
+
+      <div class="option__options_container">
+        <div class="option__container file"></div>
+        <div class="option__container folder"></div>
+        <div class="option__container cloud"></div>
+      </div>
+    </section>
+    <section class="main__info">
+      <p class="info__text">You've used <strong>815 GB</strong> of your storage</p>
+      <div class="info__bar">
+        <div class="info__progress">
+          <div class="info__circle">
+          </div>
+        </div>
+        <div class="info__message_box">
+          <div class="info__message_container">
+            <span class="info__amount">185</span><span class="info__left">GB LEFT</span>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="info__space_container">
+        <span class="info__min">0 GB</span>
+        <span class="info__max">1000 GB</span>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>

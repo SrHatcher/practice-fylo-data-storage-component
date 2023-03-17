@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/static/Raleway-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/static/Raleway-Bold.ttf');
+    font-weight: 700;
+}
+
+@supports(font-variation-settings: normal){
+    /*for some reason it doesn't load the variable font even though my browser supports it*/
+    @font-face {
+        font-family: 'Raleway';
+        src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype supports variations'),
+        url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype-variations');
+        font-weight: 400 700;
+    }
+}
+
+:root{
+    --gradient1: hsl(6, 100%, 80%);
+    --gradient2: hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --font: 'Raleway', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    font-family: var(--font);
+    font-weight: 400;
+
+    background-image: url('../images/bg-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.sr-only{
+    position: absolute;
+    left: -1000rem;
+    top: auto;
+
+    width: 0.1rem;
+    height: 0.1rem;
+
+    overflow: hidden;
+}
+.main__options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding:  3rem 4rem;
+    height: 20rem;
+    width: 32.7rem;
+
+    border-radius: 1rem;
+    border-top-right-radius: 10rem;
+    background-color: var(--dark-blue);
+}
+.option__logo{
+    display: inline-block;
+
+    width: 15rem;
+    height: 6rem;
+
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15rem;
+}
+.option__options_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    width: fit-content;
+}
+.option__container{
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 1rem;
+    background-color: var(--very-dark-blue);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.file{
+    background-image: url('../images/icon-document.svg');
+}
+.folder{
+    background-image: url('../images/icon-folder.svg');
+}
+.cloud{
+    background-image: url('../images/icon-upload.svg');
+}
+.main__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    padding: 3rem 4rem;
+
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+}
+.info__text{
+    color: white;
+}
+.info__bar{
+    position: relative;
+
+    width: 100%;
+    height: 2rem;
+    padding: 0.3rem;
+
+    border-radius: 2rem;
+    background-color: #15204a;
+}
+.info__progress{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    width: 82%;
+    height: 100%;
+    padding-inline-end: 0.2rem;
+
+    border-radius: 2rem;
+    background: linear-gradient(90deg, var(--gradient1), var(--gradient2));
+}
+.info__circle{
+    width: 1.2rem;
+    height: 1.2rem;
+
+    border-radius: 50%;
+    background-color: white;
+}
+.info__message_box{
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18rem;
+    height: 7.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+    border-radius: 1.5rem;
+}
+.info__message_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.info__amount{
+    font-size: 4rem;
+    font-weight: 700;
+
+    color: var(--very-dark-blue);
+}
+.info__left{
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+
+    color: var(--grayish-blue);
+}
+.info__space_container{
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+}
+.info__min{}
+.info__max{}
+
+/*
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 75%, 0 75%);
+*/
